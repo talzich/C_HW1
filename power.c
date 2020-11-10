@@ -13,8 +13,7 @@ double Exponent(int x){
 }
 
 
-double Power(double x , int y)
-{
+double Power(double x , int y){
     double res = 1; 
     for (i = 0; i<y; i++)
     {
