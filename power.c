@@ -18,6 +18,8 @@ double Power(double x , int y)
 {
     double res = 1;
     int i;
+
+
     for (i = 0; i<y; i++)
     {
         res = res*x;
