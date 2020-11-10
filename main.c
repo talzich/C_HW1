@@ -20,8 +20,8 @@ int main(){
   float fx3 = x4ToThe3Div5 - x2;
 
   printf("The value of f(x) = e^x + x^3 − 2 at x = %d is %f\n", var, fx1);
-  printf("The value of f(x) = 3x + 2X^2 at x = %d is %f\n", var, fx1);
-  printf("The value of f(x) = (4x^3)/5 -2x at x = %d is %f\n", var, fx1);
+  printf("The value of f(x) = 3x + 2X^2 at x = %d is %f\n", var, fx2);
+  printf("The value of f(x) = (4x^3)/5 -2x at x = %d is %f\n", var, fx3);
   return 0;
 
 }
