@@ -2,7 +2,7 @@
 
 
 double Exponent(int x){
-    double e = 2.7182818285;
+    double e = 2.7182818285; // #define
     double res =1;
     int i;
     for (i = 0; i<x; i++)
