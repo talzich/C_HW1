@@ -1,12 +1,13 @@
 #include "myMath.h"
 
+#define e 2.7182818285
+
 double Exponent(int x){
-    double e = 2.7182818285;
     double res =1;
     int i;
-    for (i = 0; i<x; i++)
+    for (i = 0; i < x; add(i, 1))
     {
-       res = res*e;
+       res = mul(res, e);
     }
     return res;
     
@@ -17,9 +18,9 @@ double Power(double x , int y)
 {
     double res = 1;
     int i;
-    for (i = 0; i<y; i++)
+    for (i = 0; i < y; add(i, 1))
     {
-        res = res*x;
+        res = mul(res, x);
     }
     return res; 
 }
