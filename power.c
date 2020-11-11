@@ -4,10 +4,10 @@
 
 double Exponent(int x){
     double res =1;
-    int i;
-    for (i = 0; i < x; add(i, 1))
+    float i;
+    for (i = 0; i < x; i++)
     {
-       res = mul(res, e);
+       res = res*e;
     }
     return res;
     
@@ -17,10 +17,10 @@ double Exponent(int x){
 double Power(double x , int y)
 {
     double res = 1;
-    int i;
-    for (i = 0; i < y; add(i, 1))
+    float i;
+    for (i = 0; i < y; i++)
     {
-        res = mul(res, x);
+        res = res*x;
     }
     return res; 
 }
