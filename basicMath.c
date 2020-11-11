@@ -15,6 +15,3 @@ double mul(double x , int y){
 double div(double x, int y){
     return x/y;
 }
-
-
-
