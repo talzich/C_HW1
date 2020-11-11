@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "power.c"
 
 int main(){
   double var;
-  printf("please enter a number\n" );
+  printf("please enter a number\n");
   scanf("%lf",&var );
   
   float eToThex = Exponent(var);
