@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "power.c"
+#include "basicMath.c"
 
 int main(){
   double var;
