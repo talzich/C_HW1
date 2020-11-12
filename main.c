@@ -22,8 +22,10 @@ int main(){
   double x2 = mul(2, var);
   float fx3 = sub(mulDiv5, x2);
 
+
   printf("The value of f(x) = e^x + x^3 − 2 at x = %f is %0.4f\n", var, fx1);
   printf("The value of f(x) = 3x + 2X^2 at x = %f is %0.4f\n", var, fx2);
   printf("The value of f(x) = (4x^3)/5 -2x at x = %f is %0.4f\n", var, fx3);
+
   return 0;
 }
