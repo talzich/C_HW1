@@ -1,7 +1,7 @@
 AR = ar
 CFLAGS = -c -Wall
 
-#all: complete
+all: maind mains
 
 #dynamic
 maind: main.o libmyMath.so
