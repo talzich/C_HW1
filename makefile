@@ -8,7 +8,7 @@ maind: main.o libmyMath.so
 	gcc $(CFLAGS) main.o ./libmyMath.so -o maind
 
 #static
-mains: main.o libmymath.a
+mains: main.o libmyMath.a
 	gcc $(CFLAGS) main.o libmyMath.a -o mains
 
 #creating dynamic lib .so
