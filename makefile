@@ -1,11 +1,11 @@
-prog: prog.o
-	gcc -o prog prog.o
+prog: prog.o power.o basicMath.o
+	gcc prog.o power.o basicMath.o -o prog
 
-prog.o: prog.c power.o basicMath.o
-	gcc -c prog.c
+prog.o: prog.c myMath.h
+	gcc -Wall -c prog.c
 
 power.o: power.c myMath.h
-	gcc -c power.c
+	gcc -Wall -c power.c
 
 basicMath.o: basicMath.c myMath.h
-	gcc -c basicMath.c
+	gcc -Wall -c basicMath.c
