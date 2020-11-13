@@ -14,5 +14,7 @@ power.o: power.c myMath.h
 basicMath.o: basicMath.c myMath.h
 	gcc $(CFLAGS) basicMath.c
 
+.PHONY: clean all
+
 clean:
 	rm -rf *o prog1	
