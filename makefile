@@ -1,5 +1,11 @@
+prog: prog.o
+	gcc -o prog prog.o
 
-prog1: main.o
-	gcc main.o -o prog1
-main.o: main.c power.c basicMath.c myMath.h
-	gcc -c main.c		
+prog.o: prog.c power.o basicMath.o
+	gcc -c prog.c
+
+power.o: power.c myMath.h
+	gcc -c power.c
+
+basicMath.o: basicMath.c myMath.h
+	gcc -c basicMath.c
