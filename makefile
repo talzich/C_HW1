@@ -6,30 +6,30 @@ all: maind mains
 
 #dynamic
 maind: main.o libmyMath.so
-	$(CC) $(CFLAGS) main.o ./libmyMath.so -o maind
+	$(CC) $(CFLAGS) $< ./libmyMath.so -o maind
 
 #static
 mains: main.o libmyMath.a
-	$(CC) $(CFLAGS) main.o libmyMath.a -o mains
+	$(CC) $(CFLAGS) $? -o $@
 
 #creating dynamic lib .so
 libmyMath.so: power.o basicMath.o
-	$(CC) power.o basicMath.o -shared -o libmyMath.so
+	$(CC) $? -shared -o $@
 
 #creating dynamic lib .a
 libmyMath.a: power.o basicMath.o
-	$(AR) power.o basicMath.o -rcs libmyMath.a
+	$(AR) $? -rcs libmyMath.a
 
 main.o: main.c myMath.h
-	$(CC) $(CFLAGS) main.c
+	$(CC) $(CFLAGS) $< -o $@
 
 power.o: power.c myMath.h
-	$(CC) $(CFLAGS) power.c
+	$(CC) $(CFLAGS) $< -o $@
 
 basicMath.o: basicMath.c myMath.h
-	$(CC) $(CFLAGS) basicMath.c
+	$(CC) $(CFLAGS) $< -o $@
 
 .PHONY: clean all
 
 clean:
-	rm -rf *o prog1
+	rm -rf *o main
