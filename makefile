@@ -1,34 +1,39 @@
 AR = ar
-CFLAGS = -c -Wall
+CFLAGS = -Wall -g
+CC = gcc
 
 all: maind mains
 
 #dynamic
 maind: main.o libmyMath.so
-	gcc $(CFLAGS) main.o ./libmyMath.so -o maind
+	$(CC) $(CFLAGS) -o maind main.o ./libmyMath.so
 
 #static
 mains: main.o libmyMath.a
-	gcc $(CFLAGS) main.o libmyMath.a -o mains
+	$(CC) $(CFLAGS) -o mains main.o libmyMath.a
+
+mymathd: libmyMath.so
+
+mymaths: libmyMath.a
 
 #creating dynamic lib .so
 libmyMath.so: power.o basicMath.o
-	gcc power.o basicMath.o -shared -o libmyMath.so
+	$(CC) -shared -o libmyMath.so power.o basicMath.o
 
 #creating dynamic lib .a
 libmyMath.a: power.o basicMath.o
-	$(AR) power.o basicMath.o -rcs libmyMath.a
+	$(AR) -rcs libmyMath.a power.o basicMath.o
 
 main.o: main.c myMath.h
-	gcc $(CFLAGS) main.c
+	$(CC) $(CFLAGS) -c main.c
 
 power.o: power.c myMath.h
-	gcc $(CFLAGS) power.c
+	$(CC) $(CFLAGS) -c power.c
 
 basicMath.o: basicMath.c myMath.h
-	gcc $(CFLAGS) basicMath.c
+	$(CC) $(CFLAGS) -c basicMath.c
 
-.PHONY: clean all
+.PHONY: clean
 
 clean:
-	rm -rf *o prog1	
+	rm -rf *.o maind mains *.a *.so
