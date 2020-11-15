@@ -36,4 +36,6 @@ basicMath.o: basicMath.c myMath.h
 .PHONY: clean
 
 clean:
+
 	rm -rf *.o maind mains *.a *.so
+
