@@ -11,9 +11,9 @@ In order to use our makefile you have to have a way to run unix terminal command
 1. Download the files in this repository.
 2. Place the files in an empty folder and remember the location of this folder.
 3. Open Terminal (on macOS you can use cmnd+space to start Spotlight Search and type in 'terminal').
-4. In terminal type cd followed by a space and then the path to your folder. It should look like: 'cd Projects/C/Library' .
-5. Once terminal is addressing the correct folder, type 'make' . Some compilation commands should run. 
-6. Once terminal finished compiling the program, type './maind'. 
+4. In terminal type cd followed by a space and then the path to your folder. It should look like: `cd Projects/C/Library` .
+5. Once terminal is addressing the correct folder, type `make` . Some compilation commands should run. 
+6. Once terminal finished compiling the program, type `./maind`. 
 7. The program now runs and you can see which functions this program is calculating. 
 
 ### Resources
